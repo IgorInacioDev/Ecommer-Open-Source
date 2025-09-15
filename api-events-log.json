@@ -1,0 +1,230 @@
+{
+  "api_events_log": {
+    "description": "Log de todos os eventos e retornos da API do sistema de e-commerce",
+    "created_at": "2024-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "events": {
+      "payment_creation": {
+        "description": "Eventos relacionados à criação de pagamentos",
+        "endpoints": {
+          "/api/payments": {
+            "method": "POST",
+            "description": "Criação de pedidos via Black Cat ou HyperCash",
+            "request_payload": {
+              "amount": "number",
+              "paymentMethod": "string (pix|credit_card)",
+              "items": "array",
+              "shipping": "object",
+              "customer": "object",
+              "metadata": "string (JSON)",
+              "externalRef": "string",
+              "ip": "string",
+              "postbackUrl": "string (opcional)"
+            },
+            "success_response": {
+              "success": true,
+              "blackCatData": "BlackCatOrderDataType",
+              "nocoOrderId": "string",
+              "productsId": "array"
+            },
+            "error_response": {
+              "success": false,
+              "error": "string",
+              "details": "string (opcional)"
+            }
+          }
+        }
+      },
+      "postback_processing": {
+        "description": "Eventos de processamento de postbacks de pagamento",
+        "endpoints": {
+          "/api/postback": {
+            "method": "POST",
+            "description": "Recebe notificações de status de pagamento dos provedores",
+            "request_payload": {
+              "data": {
+                "externalRef": "string",
+                "status": "string",
+                "paidAt": "string (ISO date)",
+                "amount": "number",
+                "currency": "string"
+              }
+            },
+            "success_response": {
+              "success": true,
+              "message": "Order updated successfully",
+              "orderId": "string",
+              "newStatus": "string"
+            },
+            "error_response": {
+              "success": false,
+              "error": "string",
+              "details": "string (opcional)"
+            }
+          }
+        }
+      },
+      "order_status_check": {
+        "description": "Verificação de status de pedidos",
+        "endpoints": {
+          "/api/orders/status/[externalRef]": {
+            "method": "GET",
+            "description": "Verifica o status atual de um pedido",
+            "path_params": {
+              "externalRef": "string - Referência externa do pedido"
+            },
+            "success_response": {
+              "success": true,
+              "status": "string",
+              "external_ref": "string",
+              "paid_at": "string|null",
+              "amount": "number"
+            },
+            "error_response": {
+              "error": "string",
+              "details": "string (opcional)"
+            }
+          }
+        }
+      },
+      "database_operations": {
+        "description": "Operações de banco de dados (NocoDB)",
+        "operations": {
+          "create_order": {
+            "description": "Criação de pedido no NocoDB",
+            "table": "orders",
+            "fields": {
+              "tenant_id": "string",
+              "company_id": "number",
+              "amount": "number",
+              "currency": "string",
+              "external_ref": "string",
+              "status": "string",
+              "payment_method": "string",
+              "postback_url": "string|null",
+              "metadata": "string (JSON)",
+              "customer_id": "number",
+              "ip": "string"
+            }
+          },
+          "update_order_status": {
+            "description": "Atualização de status do pedido",
+            "table": "orders",
+            "update_fields": {
+              "status": "string",
+              "paid_at": "string (ISO date)",
+              "paid_amount": "number"
+            }
+          }
+        }
+      },
+      "external_apis": {
+        "description": "Integrações com APIs externas",
+        "providers": {
+          "black_cat": {
+            "base_url": "https://api.paysharkgateway.com.br/v1",
+            "endpoints": {
+              "/transactions": {
+                "method": "POST",
+                "description": "Criação de transação de pagamento",
+                "authentication": "Basic Auth (publicKey:secretKey)",
+                "request_headers": {
+                  "Content-Type": "application/json",
+                  "accept": "application/json",
+                  "Authorization": "Basic base64(publicKey:secretKey)"
+                },
+                "response_type": "BlackCatOrderDataType"
+              }
+            }
+          },
+          "nocodb": {
+            "base_url": "process.env.NOCO_API_URL",
+            "endpoints": {
+              "/api/v2/tables/m6bx9e2675jbfye/records": {
+                "methods": ["GET", "POST", "PATCH"],
+                "description": "CRUD operations on orders table",
+                "authentication": "xc-token header"
+              }
+            }
+          }
+        }
+      },
+      "frontend_events": {
+        "description": "Eventos do frontend relacionados a pagamentos",
+        "components": {
+          "CheckoutForm": {
+            "events": [
+              "payment_method_selection",
+              "form_submission",
+              "order_creation_request"
+            ]
+          },
+          "PixPaymentPage": {
+            "events": [
+              "qr_code_display",
+              "pix_code_copy",
+              "status_check_polling",
+              "payment_confirmation"
+            ]
+          }
+        }
+      },
+      "error_handling": {
+        "description": "Tratamento de erros do sistema",
+        "common_errors": {
+          "payment_creation_failed": {
+            "causes": [
+              "Invalid payment data",
+              "External API unavailable",
+              "Database connection error"
+            ],
+            "http_status": 500
+          },
+          "order_not_found": {
+            "causes": [
+              "Invalid external_ref",
+              "Order not in database"
+            ],
+            "http_status": 404
+          },
+          "postback_validation_failed": {
+            "causes": [
+              "Missing required fields",
+              "Invalid data format"
+            ],
+            "http_status": 400
+          }
+        }
+      }
+    },
+    "status_flow": {
+      "description": "Fluxo de status dos pedidos",
+      "states": {
+        "waiting_payment": "Aguardando pagamento do cliente",
+        "paid": "Pagamento confirmado",
+        "cancelled": "Pedido cancelado",
+        "refunded": "Pagamento estornado"
+      },
+      "transitions": {
+        "waiting_payment -> paid": "Via postback do provedor de pagamento",
+        "paid -> refunded": "Via solicitação de estorno",
+        "waiting_payment -> cancelled": "Via timeout ou cancelamento manual"
+      }
+    },
+    "monitoring": {
+      "description": "Pontos de monitoramento do sistema",
+      "metrics": [
+        "payment_creation_success_rate",
+        "postback_processing_time",
+        "order_status_check_frequency",
+        "external_api_response_time"
+      ],
+      "logs": [
+        "All API requests/responses",
+        "Database operations",
+        "External API calls",
+        "Error occurrences"
+      ]
+    }
+  }
+}

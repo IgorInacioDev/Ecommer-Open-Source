@@ -1,0 +1,106 @@
+{
+  "id": 16676513,
+  "tenantId": "ccaca050-bd57-4c10-a050-55d7f8e492e6",
+  "companyId": 16816,
+  "amount": 13900,
+  "currency": "BRL",
+  "authorizationCode": null,
+  "basePrice": null,
+  "boleto": null,
+  "card": null,
+  "createdAt": "2025-09-05T07:57:16.669Z",
+  "customer": {
+    "address": {
+      "city": "Rio de Janeiro",
+      "complement": "até 1004 - lado par",
+      "country": null,
+      "neighborhood": "Barra da Tijuca",
+      "state": "RJ",
+      "street": "Estrada da Barra da Tijuca",
+      "streetNumber": "12312",
+      "zipCode": "22611202"
+    },
+    "birthdate": null,
+    "createdAt": "2025-08-05T18:13:59.418Z",
+    "document": {
+      "number": "39225500459",
+      "type": "cpf"
+    },
+    "email": "qwdqwdwqd2@qwdq.com",
+    "externalRef": null,
+    "id": 12940960,
+    "name": "qwdqwd qwdqwd",
+    "phone": "21964807100"
+  },
+  "delivery": {
+    "createdAt": "2025-09-05T07:57:16.669Z",
+    "status": "waiting",
+    "trackingCode": null,
+    "updatedAt": "2025-09-05T07:57:16.669Z"
+  },
+  "externalRef": "order_1757059032998_session_1757056951585",
+  "fee": {
+    "currency": "BRL",
+    "estimatedFee": 1051,
+    "fixedAmount": 80,
+    "netAmount": 12848,
+    "spreadPercent": 699
+  },
+  "installments": 1,
+  "interestRate": null,
+  "ip": "45.5.115.208",
+  "items": [
+    {
+      "externalRef": "2",
+      "quantity": 1,
+      "tangible": true,
+      "title": "Protetor Solar em Bastão Com Cor FPS 95\\r",
+      "unitPrice": 13900
+    }
+  ],
+  "metadata": "{\"order\":{\"timestamp\":\"2025-09-05T07:57:12.998Z\",\"source\":\"checkout_form\",\"version\":\"1.0\"},\"customer\":{\"formData\":{\"email\":\"qwdqwdwqd2@qwdq.com\",\"name\":\"qwdqwd qwdqwd\",\"phone\":\"21964807100\",\"saveInfo\":false},\"tracking\":{\"fingerprint\":{\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36\",\"language\":\"pt-BR\",\"platform\":\"Win32\",\"cookieEnabled\":true,\"screenResolution\":\"1920x1080\",\"colorDepth\":24,\"timezone\":\"America/Sao_Paulo\",\"canvasFingerprint\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAALcElEQVR4AeyaO6g9VxWHj7a+7bRQFEXQQkQFFUQFFQS1EAstVLBUOwsFwUIstLDx0QpapQghJIEUCeRRJIEkkBQJhBQhISSkSAjk0Sbru9x1mXvuecx5zMx+fH9m3dnPtdf+1n//zsy5970r/0lAAhKohICCVUmiDFMCElitFCz/F0hAAtUQGArW+yPq+8Pe2WA/irbar4/FBp4PY38Pxf2FsFr29eWIlXi5R3HnxZ7II/m8NtCKBGonMBSs3MuPo/CegVG/JepjDksMK/b6SkT2XNgHwr4R9omwO8NquB6PIImXexS9JNAngU2CtU7isWh4Niyv/0Xhr2FvXRpCxqc5n+o8vWCMie5VPtXwqU8dow+jjDH/9ijg4w9xZz6Gf/qi6eKif7gGZdroZBw+MOYO/dOP3zui8K2wN8J+GcbTVsbF+H9dtjEfy75oXuGfeGhnHmOH6+c+6cfwxzyMtRnPPPrwSz8M8UEbvlmD8fiinTn0Uf5mdOQTFuOeiHr25xhY4Dv3+VSMwVfcvCTQBoExgsWTyZOx3eGn+y+i/pmw94U9E3ZXGAeSJzOeYD4ZdQ7ly3HnwH0+7lwcoG9HgX4OWBRX340fD4d9J+w3YR8Pw8/P4n5bGHMYyxp3R50+jPX+E/W8vhcF/ND3qygPr79HhSfFB+JOfPfEff36dTT8JIz5f4z7v8NYGyOOv0SdPsYwNqoXF/2PROl3YfTjn/0hVNF0cTGeefTnU92foucfYbSx1wejjBjFbfWp+PHBMPrg9XaUh9dno5L98GL8b6MN37nPL0Qd/nHz6o5AoxveJFh8QvOpnUadA4hoJAZEKA8DQsOB4ZDT/2b8+H0Y7RzAW6P8gzDmc7h4LYvq6nPxg7avx/3esPWLw8e6rIMv+ocCxXpfjEbWiNvq1fixyU80j7qIM0UZP4gF8SLYxJxrM4ax6ZSnNXgQL225/59HBTGL2+rR+IGwx+3q+n+Ucs59UWYM4h3Fi2u4xkXD4Ad7/edlHT6snx8Kl83eJNAegU2CxSc0hzWNA/vV2HqKRhSvXRwUDjSvWtnxUhReC+Oi/OEo8OTBgeQpiacjxADRiq4Vh5lDix/GI5a83tCHsUa+ztGHMY4nDfqnNNYmXoQo13k6C3GnH9EipjReoz8SfbuuoQ98swa+ds2xTwJdE9gkWOtA8onip+sdI+uI0esxFuHjQHJQeXrAH6LFaxwHFuP1B6Hk6YMnu+F3O/k6R38ar6TEF+4XvYg3Y8p7Ph0uGpiLS6AlAmMEK/eL0GR5eKedV0KeoLIdIfroZQUh4qnq+1HnEPP0wdPRh6KOaPH6FcVrF99B4S9fkzatcW3CWSvXnbE2cfP6mj0Ib5Y39WffrvvQB75ZA1+75tgnga4JjBEsviPidXCTsAAvX+X+RiWMw8eXybTn0w8HkS+lo3vFqyOC9aWocEh5AoviildAXovyex9eFz8dHayLL14Xc41ovjGetikMgUWQ+VIb//BAaCljPF0N+2njC3e+V4IF9U2GD3zRB1984Iu6JgEJbCCwSbB4FcvvYrhzYDmsKT7rbniC+mE0Ij6MR5AQHp6Sovniwge/ludJi/H5RTHjqDOIL6A55IgZfpiT6zKGL7F5ZaQP47d4X4uJ+IrbZBf++Q3fn2MF1uU3hv+Ncsa+3s8YfskAE+KOoRsvnh7xxXj+zo018LVx8AGNcEP8Xok5KYhR9JJA/QSGgsXhQhDyO5jhHTHJ3SJEWNa5r89d7+cgImj8eQHjMcZglNOob1s3fWQ//mhjLmK67w8r2QP7I1bmMZ825rMuRhlb90ed78tYm3kvMmhgw37G5DoMYc/DOm0YgocvxuMbH7Svx0Ybfbm/YZk+jNgxyjl/6JN2bSMBG2siMBSsmuKeM9b1V1VeWfl7MX5xMGccriWB7gkoWPv/C/AUNnxV5ZWV7+No3z/bERKQwNkIKFjjUPK6xatb2qlihT9s3OqOkoAELgicKFgXPvwhAQlIYBYCCtYsmF1EAhI4BwEF6xwU9SEBCcxCQMGaBXMTi7gJCSxOQMFaPAUGIAEJjCWgYI0l5TgJSGBxAgrW4ikwAAmUR6DUiBSsUjNjXBKQwA0CCtYNJDZIQAKlElCwSs2McUlAAjcIKFg3kJzeoAcJSGAaAgrWNFz1KgEJTEBAwZoAqi4lIIFpCChY03DVay8E3OesBBSsWXG7mAQkcAoBBesUes6VgARmJaBgzYrbxSQggVMILCtYp0TuXAlIoDsCClZ3KXfDEqiXgIJVb+6MXALdEVCwukv5Uht2XQmcTkDBOp2hHiQggZkIKFgzgXYZCUjgdAIK1ukM9SABCVwnMFlNwZoMrY4lIIFzE1Cwzk1UfxKQwGQEFKzJ0OpYAhI4NwEF69xET/enBwlIYAsBBWsLGJslIIHyCChY5eXEiCQggS0EFKwtYGyWwBwEXOMwAgrWYbwcLQEJLEhAwVoQvktLQAKHEVCwDuPlaAlIYEECVQvWgtxcWgISWICAgrUAdJeUgASOI6BgHcfNWRKQwAIEFKwFoLvkEQScIoEgoGAFBC8JSKAOAgpWHXkySglIIAgoWAHBSwISKInA9lgUrO1s7JGABAojoGAVlhDDkYAEthNQsLazsUcCEiiMgIJVWEJOD0cPEmiXgILVbm7dmQSaI6BgNZdSNySBdgkoWO3m1p21T6C7HSpY3aXcDUugXgIKVr25M3IJdEdAweou5W5YAvUS6Fmw6s2akUugUwIKVqeJd9sSqJGAglVj1oxZAp0SULA6TXxv23a/bRBQsNrIo7uQQBcEFKwu0uwmJdAGAQWrjTy6Cwl0QWCUYHVBwk1KQALFE1Cwik+RAUpAAklAwUoS3iUggeIJKFjFp2jmAF1OAgUTULAKTo6hSUAC1wkoWNd5WJOABAomoGAVnBxDk8C0BOrzrmDVlzMjlkC3BBSsblPvxiVQHwEFq76cGbEEuiWgYB2deidKQAJzE1Cw5ibuehKQwNEEFKyj0TlRAhKYm4CCNTdx16uRgDEXQkDBKiQRhiEBCewnoGDtZ+QICUigEAIKViGJMAwJSGA/gTkEa38UjpCABCQwgoCCNQKSQyQggTIIKFhl5MEoJCCBEQQUrBGQHDKegCMlMCUBBWtKuvqWgATOSkDBOitOnUlAAlMSULCmpKtvCbRMYIG9KVgLQHdJCUjgOAIK1nHcnCUBCSxAQMFaALpLSkACxxFQsI7jdvosPUhAAgcTULAORuYECUhgKQIK1lLkXVcCEjiYgIJ1MDInSOBQAo4/FwEF61wk9SMBCUxOQMGaHLELSEAC5yKgYJ2LpH4kIIHJCVQgWJMzcAEJSKASAgpWJYkyTAlIYLVSsPxfIAEJVENAwaomVV0E6iYlsJOAgrUTj50SkEBJBBSskrJhLBKQwE4CCtZOPHZKQAJTETjGr4J1DDXnSEACixBQsBbB7qISkMAxBBSsY6g5RwISWISAgrUI9tMX1YMEeiSgYPWYdfcsgUoJKFiVJs6wJdAjAQWrx6y757oIGO0VAQXrCoUFCUigdAIKVukZMj4JSOCKgIJ1hcKCBCRQOoH2Bav0DBifBCQwmoCCNRqVAyUggaUJKFhLZ8D1JSCB0QQUrNGoHFg+ASNsnYCC1XqG3Z8EGiKgYDWUTLcigdYJKFitZ9j9SaAhAgPBamhXbkUCEmiSgILVZFrdlATaJKBgtZlXdyWBJgkoWE2mde+mHCCBKgkoWFWmzaAl0CcBBavPvLtrCVRJQMGqMm0GLYHxBFoaqWC1lE33IoHGCShYjSfY7UmgJQIKVkvZdC8SaJyAgrUnwXZLQALlEFCwysmFkUhAAnsIKFh7ANktAQmUQ0DBKicXRrI0AdcvnoCCVXyKDFACEkgCClaS8C4BCRRPQMEqPkUGKAEJJIF3AQAA//8CYIKOAAAABklEQVQDAHEPMjysosNcAAAAAElFTkSuQmCC\",\"hardwareConcurrency\":6,\"deviceMemory\":0,\"connection\":\"4g\"},\"utm\":{\"utm_source\":\"\",\"utm_medium\":\"\",\"utm_campaign\":\"\",\"utm_term\":\"\",\"utm_content\":\"\",\"referrer\":\"http://192.168.18.17:3000/checkout\",\"landing_page\":\"http://192.168.18.17:3000/checkout\"},\"session\":{\"sessionId\":\"session_1757056951585\",\"visitCount\":19,\"firstVisit\":\"2025-09-05T05:09:16.929Z\",\"lastVisit\":\"2025-09-05T07:56:59.986Z\",\"pageViews\":12},\"performance\":{\"loadTime\":7794.10000000149,\"connectionType\":\"4g\",\"downlink\":10}}},\"technical\":{\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36\",\"viewport\":\"1712x992\",\"timestamp\":1757059032998,\"locale\":\"pt-BR\",\"timezone\":\"America/Sao_Paulo\"},\"marketing\":{\"discountCode\":\"\",\"utm_source\":\"\",\"utm_medium\":\"\",\"utm_campaign\":\"\",\"utm_term\":\"\",\"utm_content\":\"\",\"referrer\":\"http://192.168.18.17:3000/checkout\",\"landing_page\":\"http://192.168.18.17:3000/checkout\"}}",
+  "paidAmount": 0,
+  "paidAt": null,
+  "payer": null,
+  "paymentMethod": "pix",
+  "pix": {
+    "end2EndId": null,
+    "expirationDate": "2025-09-06",
+    "qrcode": "00020126860014br.gov.bcb.pix2564pix.ecomovi.com.br/qr/v3/at/593ece50-45ae-4040-b7dd-3262762b56705204000053039865802BR5925FORTCAP_HOLDING_DE_INVEST6006MACEIO62070503***6304C088",
+    "receiptUrl": null
+  },
+  "postbackUrl": null,
+  "redirectUrl": null,
+  "refundedAmount": 0,
+  "refundedAt": null,
+  "refunds": [],
+  "refusedReason": null,
+  "returnUrl": null,
+  "secureId": "f5e9291e-2f3d-443d-b4b7-e2ad6acd6b78",
+  "secureUrl": "f5e9291e-2f3d-443d-b4b7-e2ad6acd6b78",
+  "shipping": {
+    "address": {
+      "city": "Rio de Janeiro",
+      "complement": "até 1004 - lado par",
+      "country": null,
+      "neighborhood": "Barra da Tijuca",
+      "state": "RJ",
+      "street": "Estrada da Barra da Tijuca",
+      "streetNumber": "12312",
+      "zipCode": "22611202"
+    },
+    "fee": 0
+  },
+  "splits": [
+    {
+      "amount": 13900,
+      "chargeProcessingFee": false,
+      "netAmount": 12848,
+      "recipientId": 16816
+    }
+  ],
+  "status": "waiting_payment",
+  "threeDS": null,
+  "traceable": false,
+  "updatedAt": "2025-09-05T07:57:16.669Z"
+}

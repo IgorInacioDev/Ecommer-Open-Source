@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Configuração da fonte Gotham Condensed Bold */
+@font-face {
+  font-family: 'Gotham Condensed Bold';
+  src: url('/fonts/GothamCond-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Classes de fonte com prioridade máxima */
+.font-syne {
+  font-family: var(--font-geist-syne), 'Syne', sans-serif !important;
+}
+
+.font-barlow {
+  font-family: var(--font-geist-barlow), 'Barlow', sans-serif !important;
+}
+
+.font-montserrat {
+  font-family: var(--font-geist-montserrat), 'Montserrat', sans-serif !important;
+}
+
+.font-gotham {
+  font-family: 'Gotham Condensed Bold', sans-serif !important;
+}
+
+/* Classes utilitárias adicionais */
+.font-syne-force {
+  font-family: var(--font-geist-syne), 'Syne', sans-serif !important;
+}
+
+.font-barlow-force {
+  font-family: var(--font-geist-barlow), 'Barlow', sans-serif !important;
+}
+
+.font-montserrat-force {
+  font-family: var(--font-geist-montserrat), 'Montserrat', sans-serif !important;
+}
+
+.font-gotham-force {
+  font-family: 'Gotham Condensed Bold', sans-serif !important;
+}
+
+/* Garantir que estilos inline tenham prioridade absoluta */
+* {
+  font-family: inherit;
+}
+
+[style*="font-family"] {
+  font-family: inherit !important;
+}
+
+/* Utility classes para sobrescrever qualquer fonte */
+.override-font-syne {
+  font-family: var(--font-geist-syne), 'Syne', sans-serif !important;
+}
+
+.override-font-barlow {
+  font-family: var(--font-geist-barlow), 'Barlow', sans-serif !important;
+}
+
+.override-font-montserrat {
+  font-family: var(--font-geist-montserrat), 'Montserrat', sans-serif !important;
+}
+
+.override-font-gotham {
+  font-family: 'Gotham Condensed Bold', sans-serif !important;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 12s linear infinite;
+}
+
+
+/* Reset do body - sem font-family padrão */
+body {
+  -webkit-font-smoothing: antialiased;
+}
